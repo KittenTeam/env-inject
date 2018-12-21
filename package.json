@@ -14,5 +14,10 @@
   "license": "MIT",
   "devDependencies": {
     "standard-version": "^4.4.0"
+  },
+  "dependencies": {
+    "js-yaml": "^3.12.0",
+    "lodash.merge": "^4.6.1",
+    "replace": "^1.0.1"
   }
 }
