@@ -2,8 +2,8 @@ const fs = require('fs')
 const path = require('path')
 const merge = require('lodash.merge')
 
-module.exports = function({
-  dir = process.cwd(),
+module.exports = function loadEnv({
+  dir = path.resolve(process.cwd(), './env'),
   mode,
   extname = 'json'
 } = {}) {

@@ -2,7 +2,7 @@ const path = require('path')
 const replace = require('replace')
 const loadEnv = require('./loadEnv')
 
-module.exports = function(context = {}) {
+function envInject(context = {}) {
   const config = loadEnv(context)
   const {
     markup = '<!-- <config-script></config-script> -->',
@@ -22,3 +22,7 @@ module.exports = function(context = {}) {
   })
   return config
 }
+
+envInject.loadEnv = loadEnv
+
+module.exports = envInject
