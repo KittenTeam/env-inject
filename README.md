@@ -20,14 +20,14 @@ npm i @kitten-team/env-inject
 
 ## 使用
 
-1. 准备你的环境配置文件，然后一定要记得将带有 local 的环境配置文件加入 git 忽略
+1.准备你的环境配置文件，然后一定要记得将带有 local 的环境配置文件加入 git 忽略
 
 ```text
 .env.local.*
 .env.*.local.*
 ```
 
-2.  在准备好的项目 html 模板文件加入标记
+2.在准备好的项目 html 模板文件加入标记
 
 ```html
 <!DOCTYPE html>
@@ -155,7 +155,7 @@ other: 5
 
 ```js
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const loadEnv = require('@kitten-team/env-inject/loadEnv')
+const loadEnv = require('@kitten-team/env-inject').loadEnv
 const config = loadEnv() //只调用内部loadEnv文件获得配置而不注入
 const configScript =
   process.env.NODE_ENV === 'production'
@@ -183,14 +183,6 @@ module.exports = {
 默认值： 无
 
  定义需要获取指定的模式/环境的配置
-
-### markup
-
-类型： string | RegExp
-
-默认值： `<!-- <config-script></config-script> -->`
-
- 标记点/锚点
 
 ### markup
 
@@ -247,3 +239,7 @@ module.exports = {
 默认值: `json`
 
 定义你的环境变量文件使用的是什么格式，支持 js,json,yaml，很抱歉没做自动识别...
+
+## 更新日志
+
+[CHANGELOG.md](https://github.com/KittenTeam/env-inject/blob/master/CHANGELOG.md)
