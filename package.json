@@ -11,6 +11,7 @@
     "mode",
     "docker"
   ],
+  "types": "types/index.d.ts",
   "license": "MIT",
   "devDependencies": {
     "standard-version": "^4.4.0"
