@@ -113,6 +113,8 @@ other: 5
 
 - 服务端的环境变量不会最终注入到文件中，而是会注入到 process.env 里，所以建议使用大写定义
 
+- **_由于给[process.env](http://nodejs.cn/api/process.html#process_process_env)设置值均会转换为字符串，所以如果需要为服务端的某个变量设置一个假值时推荐使用空字符串''，其余的 0，false，null 实际都会因为转为字符串而变为真值，一定注意！！！_**
+
 - 合并规则优先级`.env < .env.local < .env.[mode] < .env.[mode].local`
 
 - 当没有 mode 指定时，只会最多取.env 及 .env.local 两个文件的值

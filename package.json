@@ -1,19 +1,24 @@
 {
   "name": "@kitten-team/env-inject",
   "version": "1.0.0",
-  "description": "将环境变量自动注入项目方案",
+  "description": "将环境变量自动收集并注入html文件中的方案",
   "main": "index.js",
   "scripts": {
+    "test": "jest",
+    "prepush": "npm run test",
     "release": "standard-version"
   },
   "keywords": [
     "env",
     "mode",
-    "docker"
+    "docker",
+    "config"
   ],
   "types": "types/index.d.ts",
   "license": "MIT",
   "devDependencies": {
+    "husky": "^1.2.1",
+    "jest": "^23.6.0",
     "standard-version": "^4.4.0"
   },
   "dependencies": {
