@@ -1,6 +1,6 @@
 {
   "name": "@kitten-team/env-inject",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "将环境变量自动收集并注入html文件中的方案",
   "main": "index.js",
   "scripts": {
